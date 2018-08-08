@@ -288,7 +288,23 @@ class ModelToolExchange1c extends Model {
 
 //					$sklad = $offer->Склад[2][ИдСклада] . " ". $offer->Склад[2][КоличествоНаСкладе];
 //                    $data['location'] = isset($sklad) ? (string)$sklad : "Нет в наличии";
-                    if($offer->Склад[0][КоличествоНаСкладе] !=0) {
+                    if ($offer->Склад[0][КоличествоНаСкладе] !=0 && $offer->Склад[1][КоличествоНаСкладе] !=0 && $offer->Склад[2][КоличествоНаСкладе] !=0){
+                         	 $sklad = 'Лепсе, Дарница, П.Борщаговка';
+                             $data['location'] = isset($sklad) ? (string)$sklad : "Нет в наличии";
+					
+					}else if ($offer->Склад[0][КоличествоНаСкладе] !=0 && $offer->Склад[2][КоличествоНаСкладе] !=0){
+                         	 $sklad = 'Лепсе, Дарница';
+                             $data['location'] = isset($sklad) ? (string)$sklad : "Нет в наличии";
+					
+					}else  if ($offer->Склад[0][КоличествоНаСкладе] !=0 && $offer->Склад[1][КоличествоНаСкладе] !=0  ){
+                         	 $sklad = 'П.Борщаговка,Лепсе';
+                             $data['location'] = isset($sklad) ? (string)$sklad : "Нет в наличии";
+					
+					}else if ($offer->Склад[1][КоличествоНаСкладе] !=0 && $offer->Склад[2][КоличествоНаСкладе] !=0){
+                         	 $sklad = 'П.Борщаговка,Дарница';
+                             $data['location'] = isset($sklad) ? (string)$sklad : "Нет в наличии";
+					
+					}else if($offer->Склад[0][КоличествоНаСкладе] !=0) {
                         $sklad = 'Лепсе, Вацлава Гавела 16';
                         $data['location'] = isset($sklad) ? (string)$sklad : "Нет в наличии";
 
@@ -296,11 +312,14 @@ class ModelToolExchange1c extends Model {
                              $sklad = 'Дарница, проспект Освободителей 5';
                              $data['location'] = isset($sklad) ? (string)$sklad : "Нет в наличии";
 
-                    }else if ($offer->Склад[3][КоличествоНаСкладе] !=0){
-                        $sklad = 'Основной склад';
+                    }else if ($offer->Склад[1][КоличествоНаСкладе] !=0 ){
+                         	 $sklad = 'П.Борщаговка';
+                             $data['location'] = isset($sklad) ? (string)$sklad : "Нет в наличии";
+					
+					}else  if($offer->Склад[3][КоличествоНаСкладе] !=0){
+                    	$sklad = 'Основной склад';
                         $data['location'] = isset($sklad) ? (string)$sklad : "Нет в наличии";
                     }
-
 
 
 
