@@ -82,5 +82,8 @@ Please donate via PayPal to donate@opencart.com
   .primary-define #powered{
   background: #000;
   }
+  .primary-define #bottom h3{
+    color:#fff;
+  }
   
 </style>
