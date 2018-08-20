@@ -89,7 +89,9 @@ $(document).ready(function () {
 		<div class="wrapper clearafter"> <?php echo $language; ?> <?php echo $currency; ?>
 			<div id="welcome">
 				<span class="icon-mobile-grey"><a href = "tel:+380988502773">(098) 850-27-73</a> / <a href ="tel:+380973337628">(097) 333-76-28</a></span>
-				
+			</div>
+			<div style="display: inline-block; background-color: #000; color:#fff; font-family: Arial, Calibri; border-radius:30%;">
+				<span>Склад холодильного та торгового оборудования</span>
 			</div>
 			<div class="links">  <a href="<?php echo $shopping_cart; ?>" id="link-cart" class="icon-cart"><?php echo $text_shopping_cart; ?></a> <a href="<?php echo $checkout; ?>" id="link-checkout" class="icon-checkout"><?php echo $text_checkout; ?></a> <a href="<?php echo $compare; ?>" class="icon-compare-grey" id="compare_total"><?php echo $text_compare; ?></a></div>
 		</div>
