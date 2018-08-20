@@ -123,10 +123,6 @@ $(document).ready(function () {
 						margin-left: auto;
 						margin-right: auto;
 					}
-					.primary-define .mainmenu > li > a {
-						display: flex;
-						flex-direction: column;
-					}
 
 				}
 				.primary-define #header {
