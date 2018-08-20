@@ -10,8 +10,8 @@
 
 <?php if(($block['info']['status'] == 1) || ($block['contact']['status'] == 1) || ($block['twitter']['status'] == 1) || ($block['facebook']['status'] == 1)): ?>
 <div id="bottom">
-	<span class="toggle"></span>
-	<div class="wrapper clearafter">
+		<span class="toggle"></span>
+	<div class="wrapper clearafter" id="descript">
 	<?php if($block['info']['status'] == 1) : ?>
 		<div id="shop-info" class="col grid-<?php echo $count; ?>">
 			<h3><span><?php echo $block['info']['title']?></span></h3>
@@ -76,6 +76,61 @@
 			<div class="fb-like-box" data-href="http://www.facebook.com/<?php echo $block['facebook']['page']; ?>" data-width="<?php echo $block['facebook']['width']; ?>" data-height="<?php echo $block['facebook']['height']; ?>" data-show-faces="true" data-colorscheme="<?php echo $block['facebook']['theme']; ?>" data-stream="false" data-show-border="false" data-header="false"></div>
 		</div>
 	<?php endif; ?>
+ <div id="google_map">
+		<iframe src="https://www.google.com/maps/d/embed?mid=1cpr3yUiIlNBNUGWObC9BAjLk-UAvPL3f" ></iframe>
+	</div>
   </div>
+	
+	
 </div>
 <?php endif; ?>
+<style type="text/css">
+	#bottom{
+		background-color: #F2D95D;
+		background-image: radial-gradient(#8B0000 76%, transparent 0),
+		radial-gradient(#8B0000 72%, transparent 0),
+		radial-gradient(#8B0000 68%, transparent 0),
+		radial-gradient(#8B0000 64%, transparent 0),
+		radial-gradient(#8B0000 60%, transparent 0),
+		radial-gradient(#8B0000 56%, transparent 0),
+		radial-gradient(#8B0000 52%, transparent 0),
+		radial-gradient(#8B0000 48%, transparent 0),
+		radial-gradient(#8B0000 44%, transparent 0),
+		radial-gradient(#8B0000 40%, transparent 0),
+		radial-gradient(#8B0000 36%, transparent 0),
+		radial-gradient(#8B0000 32%, transparent 0),
+		radial-gradient(#8B0000 28%, transparent 0),
+		radial-gradient(#8B0000 24%, transparent 0);  
+		background-size: 1em 1em;
+		background-repeat: repeat-y;
+		background-position: 0 0, 1em 0, 2em 0, 3em 0, 4em 0, 5em 0, 6em 0, 7em 0, 8em 0, 9em 0, 10em 0, 11em 0, 12em 0, 13em 0;
+
+	}
+	
+	#google_map{
+		display: flex;
+		padding-top:50px;
+		padding-left: 15px;
+		width:280px;
+		height:310px;
+	}
+	#shop-contact{
+		width:250px;
+	}
+	@media only screen and (max-width: 400px){
+		#bottom{
+			background: 
+			linear-gradient(225deg, transparent 24.5%, #449CB4 24.6%, transparent 24.8%) 37px -37px, 
+			linear-gradient(135deg, transparent 24.5%, #449CB4 24.6%, transparent 24.8%) 37px 111px, 
+			linear-gradient(135deg, transparent 24.5%, #449CB4 24.6%, transparent 24.8%) 37px 37px, 
+			linear-gradient(225deg, transparent 24.5%, #449CB4 24.6%, transparent 24.8%) 37px 37px, 
+			linear-gradient(135deg, transparent 24.5%, #449CB4 24.6%, transparent 24.8%) 74px 0px, 
+			linear-gradient(225deg, transparent 24.5%, #449CB4 24.6%, transparent 24.8%) 74px 0px, 
+			linear-gradient(135deg, transparent 24.5%, #449CB4 24.6%, transparent 24.8%) 74px 74px, 
+			linear-gradient(225deg, transparent 24.5%, #449CB4 24.6%, transparent 24.8%) 74px 74px;
+			background-size: 148px 148px;
+			background-color: #E8F4F2;
+		}
+
+	}
+</style>
