@@ -42,6 +42,17 @@
 #id_category_image{
 	max-width: 100%;
 }
+/*--------------------------------------------------------------*/
+/*.primary-define .cat-item:hover{
+	border: 1px solid #0000CD;
+}*/
+.primary-define .cat-item img:hover,
+.primary-define .cat-item .name:hover
+{
+	width:170%;
+	height: 170%;
+	padding-bottom: 20px;
+}
 </style>
 <ul><li>
 <div class = "cat-item" >
