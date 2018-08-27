@@ -74,6 +74,20 @@
       $thumb_width = $this->config->get('config_image_product_width');
       $thumb_height = $this->config->get('config_image_product_height');
 	?>
+			<style type="text/css">
+			
+				
+				@media only screen and (min-width: 801px)
+				{
+					.primary-define .product-grid > div {
+				width: 25%;
+				height: 320px;
+			}
+			.primary-define .box-product .image img {
+				width: 200px;height: 200px;
+			}
+				}
+			</style>
 			<div>
 				<?php if ($product['thumb']) { ?>
 				<div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
@@ -83,9 +97,9 @@
 				<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
 				<div class="description"><?php echo $product['description']; ?></div>
 				<?php if ($product['price']) { ?>
-				<div class="price">
+				<div class="price" >
 					<?php if (!$product['special']) { ?>
-					<div><span class="price-fixed"><?php echo $product['price']; ?></span></div>
+					<div><span class="price-fixed" style="background-color: rgb(0,0,138); color:#fff; border-radius: 5px;"><?php echo $product['price']; ?></span></div>
 					<?php } else { ?>
 					<div class="special-price"><span class="price-fixed"><?php echo $product['special']; ?></span><span class="price-old"><?php echo $product['price']; ?></span></div>
 					<?php } ?>
