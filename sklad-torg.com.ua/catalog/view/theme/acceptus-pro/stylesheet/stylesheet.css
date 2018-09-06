@@ -420,6 +420,7 @@ small {
 	text-align: center;
 }
 /* SEARCH */
+
 .primary-define #search {
 	margin: 18px 0;
 	display: inline-block;
@@ -454,7 +455,7 @@ small {
 }
 /* MENU */
 .primary-define #menu {
-	text-align: center;
+	text-align: left;
 }
 .primary-define #menu #btn-mobile-toggle {
 	display: none;
@@ -495,7 +496,7 @@ small {
 	list-style-type: none;
 }
 .primary-define .mainmenu > li {
-	float: center;
+	float: left;
 }
 .primary-define .mainmenu li > .btn-expand-menu {
 	top: 43px;
@@ -542,7 +543,6 @@ small {
 .primary-define .mainmenu > li:hover > a,
 .primary-define .mainmenu > li.active > a {
 	background-color: rgba(0, 0, 0, 0.2);
-
 }
 .primary-define .mainmenu li .dropdown-container {
 	top: 110%;
@@ -956,6 +956,14 @@ small {
 	font-size: 16px;
 	text-decoration: none;
 }
+.primary-define .product-grid .name a {
+	color: #d01a1a;
+	font-size: 16px;
+	text-decoration: none;
+}
+.primary-define .product-grid .name a:hover{
+	color:rgb(0,0,138);
+}
 .primary-define .box-product .rating img {
 	vertical-align: middle
 }
@@ -1207,16 +1215,19 @@ small {
 	margin-top: 15px;
 	padding-top: 15px;
 	border-top: 1px solid #ddd;
+	display:none;
 }
 .primary-define .product-grid .cart a {
 	font-size: 20px;
 	font-weight: 600;
 	text-decoration: none;
 	text-transform: uppercase;
+	display:none;
 }
 .primary-define .product-grid .cart a span {
 	padding-left: 30px;
 	position: relative;
+	display:none;
 }
 .primary-define .product-grid .cart a span:before {
 	top: 0;
@@ -1226,30 +1237,35 @@ small {
 	content: "";
 	position: absolute;
 	background: url(../image/icons/icon-basket.png) center center no-repeat;
+	display:none;
 }
 .primary-define .product-grid .wishlist,
 .primary-define .product-grid .compare {
 	padding: 5px 0;
 	font-size: 13px;
-	display: inline-block;
+	display:none;
 }
 .primary-define .product-grid .wishlist {
 	margin-right: 5px;
+	display:none;
 }
 .primary-define .product-grid .compare {
 	margin-left: 5px;
+	display:none;
 }
 .primary-define .product-grid .wishlist a:hover,
 .primary-define .product-grid .compare a:hover {
 	color: #333;
+	display:none;
 	text-decoration: none;
 }
-.primary-define .product-grid .details {
+.primary-define .product-grid .details:hover {
 	opacity: 0;
 	background-color: #fff;
 	transition: 0.25s ease-out;
 	-moz-transition: 0.25s ease-out;
 	-webkit-transition: 0.25s ease-out;
+	display:none;
 }
 /* hover */
 .primary-define .product-grid > div:hover {
@@ -1262,11 +1278,11 @@ small {
 	-webkit-transform: translate(0) rotate(0);
 }
 .primary-define .product-grid > div:hover .price {
-	opacity: 0;
+	opacity: 1;
 }
 .primary-define .product-grid > div:hover .details {
 	top: 0;
-	opacity: 1;
+	opacity: 0;
 	z-index: 1;
 }
 /* TREEMENU */
