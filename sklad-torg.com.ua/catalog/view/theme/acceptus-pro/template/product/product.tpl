@@ -56,6 +56,11 @@
 					}
 				}
 
+
+				.primary-define .product-grid .cart{
+					display:none;
+					
+				}
 				</style>
 				<?php if ($thumb) { ?>
 				<?php if ($block && isset($block['zoom_effect']) && $block['zoom_effect']['status']) { ?>
@@ -121,7 +126,7 @@
 					<?php if ($manufacturer) { ?>
 					<span><?php echo $text_manufacturer; ?></span> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a><br />
 					<?php } ?>
-					<span><?php echo $text_model; ?></span> <?php echo $model; ?><br />
+					<span><!--<?php echo $text_model; ?>--> <?php echo "Код товара:"; ?></span> <?php echo $model; ?><br />
 					
 					<?php if ($location) { ?>
 					<span><?php echo $text_location; ?></span> <?php echo $location; ?><br />
@@ -367,14 +372,14 @@
       ?>
 				<div>
 					<?php if ($product['thumb']) { ?>
-					<div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
+					<div class="image" ><a href="<?php echo $product['href']; ?>" ><img  src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
 					<?php } else { ?>
 					<div class="image"><span class="no-image"><img src="image/no_image.jpg" alt="<?php echo $product['name']; ?>" /></span></div>
 					<?php } ?>
 					<?php if ($product['price']) { ?>
 					<div class="price-label">
 						<?php if (!$product['special']) { ?>
-						<div><span class="price-fixed"><?php echo $product['price']; ?></span></div>
+						<div ><span class="price-fixed"><?php echo $product['price']; ?></span></div>
 						<?php } else { ?>
 						<div class="special-price"><span class="price-old"><?php echo $product['price']; ?></span><span class="price-fixed"><?php echo $product['special']; ?></span></div>
 						<?php } ?>
@@ -393,8 +398,8 @@
 						<?php } ?>
 					</div>
 					<?php } ?>
-					<div class="details">
-						<div class="cart"><a onclick="addToCart('<?php echo $product['product_id']; ?>');"><span><?php echo $button_cart; ?></span></a></div>
+					<div class="details" >                                               
+						<div class="cart"><a onclick="addToCart('<?php echo $product['product_id']; ?>');"><span ><?php echo $button_cart; ?></span></a></div>
 						<div class="wishlist"><a onclick="addToWishList('<?php echo $product['product_id']; ?>');"><span><?php echo $button_wishlist; ?></span></a></div>
 						<div class="compare"><a onclick="addToCompare('<?php echo $product['product_id']; ?>');"><span><?php echo $button_compare; ?></span></a></div>
 					</div>
@@ -414,7 +419,7 @@
 			<?php } ?>
 		</div>
 		<?php } ?>
-	</div>
+	</div> 
 	<?php echo $content_bottom; ?></div>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/acceptus-pro/stylesheet/popup.css" />
 <script type="text/javascript" src="catalog/view/theme/acceptus-pro/js/popup.js"></script> 
