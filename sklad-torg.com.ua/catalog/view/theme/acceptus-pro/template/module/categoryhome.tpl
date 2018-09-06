@@ -51,7 +51,6 @@
 {
 	width:170%;
 	height: 170%;
-	padding-bottom: 20px;
 }
 </style>
 <ul><li>
