@@ -45,7 +45,7 @@
 					}
 				
 				}
-				@media only screen and (max-width: 359px)
+				@media only screen and (max-width: 362px)
 				{
 					.primary-define .box-product .image a img{
 						width: 400px;
@@ -54,9 +54,16 @@
 						width:74px;
 						height: 74px;
 					}
+					.primary-define .product-grid .compare a{
+	opacity: 0;
+}
+				.details{
+					margin-bottom: -22px;
+					margin-top: 0px;
+				}
 				}
 
-
+				
 				.primary-define .product-grid .cart{
 					display:none;
 					
@@ -97,11 +104,28 @@
 			<?php } ?>
 			<div class="left" style="margin-right: <?php echo $this->config->get('config_image_thumb_width') + 75 ?>px; ">
 				<h1 style="font-style: italic; font-family: David;"><?php echo $heading_title; ?></h1>
-				<?php if ($price) { ?>
+				
+				<style type="text/css">
+					.price_null{
+						font-family: Arial;
+						font-size: 23px;
+						font-style: italic;
+						color:#000;
+					}
+				</style>
+				<?php if ($price == 0) { ?>
+				<div class="price_null">
+					<div><span class="price-fixed"><?php echo "(цену уточняйте у менеджера)"; ?></span></div>
+				</div>
+				<?php } else { ?>
+
 				<div class="price">
 					<?php if (!$special) { ?>
+					
+					
 					<div><span class="price-fixed"><?php echo $price; ?></span></div>
 					<?php } else { ?>
+
 					<div class="special-price"><span class="price-fixed"><?php echo $special; ?></span><span class="price-old"><?php echo $price; ?></span></div>
 					<?php } ?>
 					<?php if ($tax) { ?>
