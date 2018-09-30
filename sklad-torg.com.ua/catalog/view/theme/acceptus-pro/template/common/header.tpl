@@ -105,6 +105,12 @@ $(document).ready(function () {
 					#id_clearafter{
 						margin-top: 120px;
 					}
+					#id_header{
+						display: flex; 
+						flex-direction:column; 
+						margin-left:auto; 
+						margin-right: auto;
+					}
 				}
 				@media only screen and (min-width: 401px) and (max-width: 900px)
 				{
@@ -112,14 +118,27 @@ $(document).ready(function () {
 					#id_clearafter{
 						margin-top: 85px;
 					}
+					.flex_elem{
+						margin-left: auto;
+					}
+					#id_header{
+						display: flex; 
+						flex-direction:column; 
+					}
 					
 				}
-				@media only screen and (min-width: 1025px) and (max-width: 1499px)
+				@media only screen and (min-width: 901px) and (max-width: 1499px)
 				{
 					#id_clearafter{
 					margin-top: 40px;
 					}
-					
+					.flex_elem{
+						margin-left: auto;
+					}
+					#id_header{
+						display: flex; 
+						flex-direction:column; 
+					}
 				}
 				@media only screen and (min-width: 1500px)
 				{
@@ -128,6 +147,13 @@ $(document).ready(function () {
 					}
 					#menu-inner{
 						margin-top: -5px;
+					}
+					.flex_elem{
+						margin-left: auto;
+					}
+					#id_header{
+						display: flex; 
+						flex-direction:column; 
 					}
 					
 				}
@@ -149,10 +175,16 @@ $(document).ready(function () {
 			<?php if ($logo) { ?>
 			<div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a></div>
 			<?php } ?>
-			<?php echo $cart; ?>
-			<?php if (($kuler_finder = $this->config->get('kuler_finder')) && $kuler_finder['status']) { ?>
+
+
+			<div   id="id_header">
+			<div class="flex_elem"><?php echo $cart; ?></div>
+			<div class="flex_elem">
+				<?php if (($kuler_finder = $this->config->get('kuler_finder')) && $kuler_finder['status']) { ?>
 			<?php echo $this->getChild('module/kuler_finder', $kuler_finder); ?>
 			<?php } else { ?>
+			
+
 			<div id="search">
 				<div id="search-inner">
 					<div class="button-search"></div>
@@ -161,7 +193,14 @@ $(document).ready(function () {
 				<!--<h3>Склад холодильного та торгового оборудования</h3>-->
 			</div>
 			<?php } ?>
-		</div>
+			</div>
+			
+			
+
+			</div>
+	</div>
+	
+
 	</div>
 	<?php if ($categories) { ?>
 	<div id="menu">
