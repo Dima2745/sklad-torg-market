@@ -119,11 +119,16 @@ $(document).ready(function () {
 						margin-top: 85px;
 					}
 					.flex_elem{
-						margin-left: auto;
+						margin-right: 50%;
+						display: inline;
 					}
 					#id_header{
 						display: flex; 
 						flex-direction:column; 
+					}
+					
+					#logo{
+						margin-left: 30%;
 					}
 					
 				}
@@ -138,6 +143,12 @@ $(document).ready(function () {
 					#id_header{
 						display: flex; 
 						flex-direction:column; 
+					}
+					#menu{
+						margin-top: -35px;
+					}
+					#logo{
+						margin-left: 30%;
 					}
 				}
 				@media only screen and (min-width: 1500px)
@@ -154,6 +165,12 @@ $(document).ready(function () {
 					#id_header{
 						display: flex; 
 						flex-direction:column; 
+					}
+					#menu{
+						margin-top: -35px;
+					}
+					#logo{
+						margin-left: 30%;
 					}
 					
 				}
@@ -172,14 +189,14 @@ $(document).ready(function () {
 				}
 				
 			</style>
+			
 			<?php if ($logo) { ?>
 			<div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a></div>
 			<?php } ?>
 
-
 			<div   id="id_header">
 			<div class="flex_elem"><?php echo $cart; ?></div>
-			<div class="flex_elem">
+			<div class="flex_elem" id="flex_elem2">
 				<?php if (($kuler_finder = $this->config->get('kuler_finder')) && $kuler_finder['status']) { ?>
 			<?php echo $this->getChild('module/kuler_finder', $kuler_finder); ?>
 			<?php } else { ?>
@@ -194,16 +211,16 @@ $(document).ready(function () {
 			</div>
 			<?php } ?>
 			</div>
-			
-			
+		</div>
 
-			</div>
+
+		<!--<h3>Склад холодильного та торгового оборудования</h3-->
 	</div>
 	
 
-	</div>
+	</div >
 	<?php if ($categories) { ?>
-	<div id="menu">
+	<div id="menu" >
 		<div id="menu-inner">	
 			<div class="wrapper clearafter"> <span id="btn-mobile-toggle">Меню</span>
 				<?php if ($this->config->get('kuler_menu_status')) { ?>
