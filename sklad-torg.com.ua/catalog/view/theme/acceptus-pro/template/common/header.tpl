@@ -138,7 +138,7 @@ $(document).ready(function () {
 						flex-direction:row; 
 					}
 					#menu{
-						margin-top: -35px;
+						margin-top: -25px;
 					}
 					
 					
@@ -159,7 +159,7 @@ $(document).ready(function () {
 						flex-direction:row; 
 					}
 					#menu{
-						margin-top: -35px;
+						margin-top: -25px;
 					}
 					
 					
