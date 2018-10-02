@@ -105,12 +105,10 @@ $(document).ready(function () {
 					#id_clearafter{
 						margin-top: 130px;
 					}
-					#id_header{
-						display: flex; 
-						flex-direction:column; 
-						margin-left:auto; 
-						margin-right: auto;
+					#logo{
+						margin-top: 40px;
 					}
+					
 				}
 				@media only screen and (min-width: 401px) and (max-width: 900px)
 				{
@@ -118,17 +116,12 @@ $(document).ready(function () {
 					#id_clearafter{
 						margin-top: 95px;
 					}
-					.flex_elem{
-						margin-right: 50%;
-						display: inline;
-					}
-					#id_header{
-						display: flex; 
-						flex-direction:column; 
-					}
 					
 					#logo{
-						margin-left: 30%;
+						margin-top: 40px;
+					}
+					#shop_cart{
+						margin-top: -80px;
 					}
 					
 				}
@@ -142,14 +135,12 @@ $(document).ready(function () {
 					}
 					#id_header{
 						display: flex; 
-						flex-direction:column; 
+						flex-direction:row; 
 					}
 					#menu{
 						margin-top: -35px;
 					}
-					#logo{
-						margin-left: 20%;
-					}
+					
 					
 				}
 				@media only screen and (min-width: 1500px)
@@ -165,14 +156,12 @@ $(document).ready(function () {
 					}
 					#id_header{
 						display: flex; 
-						flex-direction:column; 
+						flex-direction:row; 
 					}
 					#menu{
 						margin-top: -35px;
 					}
-					#logo{
-						margin-left: 20%;
-					}
+					
 					
 				}
 				#menu{
@@ -191,18 +180,13 @@ $(document).ready(function () {
 				
 			</style>
 			
-			<?php if ($logo) { ?>
-			<div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a></div>
-			<?php } ?>
+			
 
 			<div   id="id_header">
-			<div class="flex_elem"><?php echo $cart; ?></div>
-			<div class="flex_elem" id="flex_elem2">
+				<div class="flex_elem" id="flex_elem2">
 				<?php if (($kuler_finder = $this->config->get('kuler_finder')) && $kuler_finder['status']) { ?>
 			<?php echo $this->getChild('module/kuler_finder', $kuler_finder); ?>
 			<?php } else { ?>
-			
-
 			<div id="search">
 				<div id="search-inner">
 					<div class="button-search"></div>
@@ -212,6 +196,15 @@ $(document).ready(function () {
 			</div>
 			<?php } ?>
 			</div>
+
+
+				<?php if ($logo) { ?>
+			<div id="logo" class="flex_elem"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a></div>
+			<?php } ?>
+			
+
+			<div class="flex_elem" id="shop_cart"><?php echo $cart; ?></div>
+			
 		</div>
 
 
