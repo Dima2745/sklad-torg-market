@@ -116,7 +116,7 @@ $(document).ready(function () {
 				{
 					
 					#id_clearafter{
-						margin-top: 85px;
+						margin-top: 95px;
 					}
 					.flex_elem{
 						margin-right: 50%;
@@ -135,7 +135,7 @@ $(document).ready(function () {
 				@media only screen and (min-width: 901px) and (max-width: 1499px)
 				{
 					#id_clearafter{
-					margin-top: 40px;
+					margin-top: 50px;
 					}
 					.flex_elem{
 						margin-left: auto;
@@ -154,7 +154,7 @@ $(document).ready(function () {
 				@media only screen and (min-width: 1500px)
 				{
 					#id_clearafter{
-					margin-top: 40px;
+					margin-top: 50px;
 					}
 					#menu-inner{
 						margin-top: -5px;
