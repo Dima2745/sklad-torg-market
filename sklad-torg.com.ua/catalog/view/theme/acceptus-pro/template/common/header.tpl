@@ -103,7 +103,7 @@ $(document).ready(function () {
 				@media only screen and (max-width: 400px)
 				{
 					#id_clearafter{
-						margin-top: 120px;
+						margin-top: 130px;
 					}
 					#id_header{
 						display: flex; 
@@ -135,7 +135,7 @@ $(document).ready(function () {
 				@media only screen and (min-width: 901px) and (max-width: 1499px)
 				{
 					#id_clearafter{
-					margin-top: 50px;
+					margin-top: 30px;
 					}
 					.flex_elem{
 						margin-left: auto;
@@ -148,13 +148,14 @@ $(document).ready(function () {
 						margin-top: -35px;
 					}
 					#logo{
-						margin-left: 30%;
+						margin-left: 20%;
 					}
+					
 				}
 				@media only screen and (min-width: 1500px)
 				{
 					#id_clearafter{
-					margin-top: 50px;
+					margin-top: 30px;
 					}
 					#menu-inner{
 						margin-top: -5px;
@@ -170,7 +171,7 @@ $(document).ready(function () {
 						margin-top: -35px;
 					}
 					#logo{
-						margin-left: 30%;
+						margin-left: 20%;
 					}
 					
 				}
